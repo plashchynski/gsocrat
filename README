@@ -1,0 +1,16 @@
+Description:
+
+Simply dictonary and translator based on google translate
+
+
+Requirements:
+
+Ruby >= 1.8 with JSON, CGI and HTTP support.
+
+
+Installation
+
+Just download gsocrat.rb, do chmod +x gsocrat.rb and run ./gsocrat.rb
+
+
+
