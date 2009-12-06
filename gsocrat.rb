@@ -9,8 +9,11 @@ require 'json'
 class Translator
   GOOGLE_APIS = 'ajax.googleapis.com'
   TRANSLATE_ERROR = 'Translate error'
+
+  attr_accessor :lang_to, :lang_from
+
   def initialize(lang_from, lang_to)
-    @lang_from, @lang_to = lang_from, lang_to
+    self.lang_from, self.lang_to = lang_from, lang_to
   end
 
   def translate(string)
@@ -31,10 +34,12 @@ word_entry      = Gtk::Entry.new
 window          = Gtk::Window.new
 window.title    = "GSocrat"
 window.resizable= false
+window.border_width = 3
 
 translator      = Translator.new('en', 'ru')
 responseview    = Gtk::TextView.new
 responseview.editable = false
+responseview.indent   = 2
 
 window.signal_connect('delete_event') { Gtk.main_quit }
 
