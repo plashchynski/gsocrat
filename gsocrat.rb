@@ -48,7 +48,7 @@ window.signal_connect('key_press_event') do |w, e|
     when Gdk::Keyval::GDK_Escape
       Gtk.main_quit
     when Gdk::Keyval::GDK_Return
-      responseview.buffer.text = translator.translate(word_entry.text)
+      responseview.buffer.text = translator.translate(word_entry.text) if not word_entry.text.empty?
   end
 end
 
