@@ -12,5 +12,8 @@ Installation
 
 Just download gsocrat.rb, do chmod +x gsocrat.rb and run ./gsocrat.rb
 
+Hot keys
 
+Esc   - exit
+Enter - transalte
 
